@@ -8,7 +8,7 @@ namespace HighLoad.Application.Data
         User Find(int userId);
         CreateCommandResult Create(User user);
         Task<UpdateCommandResult> UpdateAsync(int userId, User user);
-        void CreateBatchAsync(User[] users);
+        void CreateBatch(User[] users);
         bool Exists(int userId);
     }
 }

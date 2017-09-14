@@ -68,7 +68,7 @@ namespace HighLoad.Framework.Data.Repositories
             return UpdateCommandResult.Success;
         }
 
-        public void CreateBatchAsync(User[] users)
+        public void CreateBatch(User[] users)
         {
             _existingUsersLookup.AddRange(Mapper.Map<User[], Entities.User[]>(users));
         }

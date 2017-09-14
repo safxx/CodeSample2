@@ -65,7 +65,7 @@ namespace HighLoad.Framework.Data.Repositories
             return UpdateCommandResult.Success;
         }
 
-        public void CreateBatchAsync(Location[] locations)
+        public void CreateBatch(Location[] locations)
         {
             _existingLocationsLookup.AddRange(Mapper.Map<Location[], Entities.Location[]>(locations));
         }

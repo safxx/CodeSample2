@@ -8,7 +8,7 @@ namespace HighLoad.Application.Data
         Location Find(int locationId);
         CreateCommandResult Create(Location location);
         Task<UpdateCommandResult> UpdateAsync(int locationId, Location location);
-        void CreateBatchAsync(Location[] locations);
+        void CreateBatch(Location[] locations);
         bool Exists(int locationId);
     }
 }

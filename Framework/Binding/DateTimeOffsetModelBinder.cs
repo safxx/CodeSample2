@@ -15,7 +15,7 @@ namespace HighLoad.Framework.Binding
 
             var valueProviderResult = bindingContext.ValueProvider
                 .GetValue(bindingContext.ModelName);
-            
+
             if (valueProviderResult == ValueProviderResult.None)
             {
                 return Task.CompletedTask;
@@ -34,7 +34,7 @@ namespace HighLoad.Framework.Binding
                 {
                     var success = false;
                     model = null;
-                    if (value.Length<12&& IsDigitsOnly(value))
+                    if (value.Length < 12 && IsDigitsOnly(value))
                     {
                         if (long.TryParse(value, out long result))
                         {
@@ -60,8 +60,8 @@ namespace HighLoad.Framework.Binding
                     bindingContext.ModelState.TryAddModelError(
                         bindingContext.ModelName,
                         bindingContext.ModelMetadata
-                        .ModelBindingMessageProvider.ValueMustNotBeNullAccessor(
-                            valueProviderResult.ToString()));
+                            .ModelBindingMessageProvider.ValueMustNotBeNullAccessor(
+                                valueProviderResult.ToString()));
 
                     return Task.CompletedTask;
                 }

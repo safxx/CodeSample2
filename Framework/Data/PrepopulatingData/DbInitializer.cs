@@ -86,7 +86,7 @@ namespace HighLoad.Framework.Data.PrepopulatingData
                 }
             ).ToArray();
 
-            usersRepository.CreateBatchAsync(users);
+            usersRepository.CreateBatch(users);
         }
 
         private static void PopulateLocations(ILocationsRepository locationsRepository, ZipArchive files)
@@ -104,7 +104,7 @@ namespace HighLoad.Framework.Data.PrepopulatingData
                 }
             ).ToArray();
 
-            locationsRepository.CreateBatchAsync(locations);
+            locationsRepository.CreateBatch(locations);
         }
 
         private static void PopulateVisits(IVisitsRepository visitsRepository, ZipArchive files, DateTime dueTime)
